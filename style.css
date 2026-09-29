@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #f8fafc;
+    font-size: 14px;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 94%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: #0f172a !important;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    width: 94%;
+    max-width: 1280px;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.nav-link {
+    font-size: 13px;
+    margin-left: 6px;
+    padding: 7px 11px !important;
+    border-radius: 6px;
+}
+
+.nav-link:hover {
+    background: #1e293b;
+}
+
+
+/* ================= HERO ================= */
+
+.hero-section {
+    padding: 55px 0;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a5f
+    );
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 18px 0 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dbeafe;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.hero-content .badge {
+    font-size: 11px;
+    padding: 7px 11px;
+}
+
+.hero-content .btn {
+    font-size: 13px;
+    padding: 9px 18px;
+}
+
+.profile-image-container {
+    position: relative;
+}
+
+.profile-image {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.15);
+    filter: grayscale(20%);
+}
+
+.online-badge {
+    position: absolute;
+    right: 8px;
+    bottom: 18px;
+    background: #22c55e;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+
+/* ================= SECTION ================= */
+
+section {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+    background: white;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+}
+
+.profile-card h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-section {
+    background: #f1f5f9;
+}
+
+.skills-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    flex: 1;
+    min-width: 180px;
+    background: white;
+    padding: 22px 15px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+    transition: 0.25s;
+}
+
+.skill-box:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.skill-box h4 {
+    font-size: 16px;
+    color: #1e3a8a;
+    margin-bottom: 7px;
+}
+
+.skill-box p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+    transition: 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card h4 {
+    font-size: 16px;
+    margin: 15px 0 7px;
+    color: #0f172a;
+}
+
+.project-card p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+.project-card .btn {
+    font-size: 12px;
+    padding: 7px 14px;
+}
+
+
+/* ================= BOOTSTRAP FLEX ================= */
+
+.bootstrap-flex-section {
+    background: #f1f5f9;
+}
+
+.bootstrap-demo {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.flex-item {
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ================= POSITIONING ================= */
+
+.position-card {
+    position: relative;
+    background: white;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+}
+
+.position-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.position-card p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+
+/* ================= JAVASCRIPT ================= */
+
+#javascript {
+    background: #f8fafc;
+}
+
+#javascript .profile-card {
+    margin-bottom: 18px;
+}
+
+
+/* ================= LAB 04 ================= */
+
+#lab04 {
+    background: #f1f5f9 !important;
+}
+
+#lab04 .container {
+    width: 94%;
+    max-width: 1280px;
+}
+
+#lab04 .section-heading {
+    margin-bottom: 35px;
+}
+
+
+/* ================= LAB 04 STUDENT CARDS ================= */
+
+.lab-student-card {
+    height: 100%;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+    transition: 0.25s;
+}
+
+.lab-student-card:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+}
+
+.lab-student-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.lab-student-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 0;
+}
+
+
+/* ================= COURSE SECTION ================= */
+
+.course-item {
+    background: white;
+    padding: 11px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #334155;
+    transition: 0.2s;
+}
+
+.course-item:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+}
+
+
+/* ================= RESULT CARDS ================= */
+
+.lab-result-card {
+    padding: 20px;
+    margin-bottom: 15px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+}
+
+.lab-result-card h5 {
+    font-size: 16px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.lab-result-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-card {
+    height: 100%;
+    background: white;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+    transition: 0.25s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+}
+
+.dashboard-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 0;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.statistics-box {
+    background: #0f172a;
+    color: white;
+    padding: 18px 22px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.9;
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ================= OBJECT INFORMATION ================= */
+
+#task4ObjectInfo {
+    background: white;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ================= DEPARTMENT INFORMATION ================= */
+
+#task4Departments {
+    background: white;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    border-radius: 6px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: white;
+}
+
+.contact-section h2 {
+    font-size: 25px;
+}
+
+.contact-section p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container,
+    #lab04 .container {
+        width: 92%;
+    }
+
+    .hero-section {
+        padding: 45px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-box {
+        width: 100%;
+    }
+
+    section {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .container,
+    #lab04 .container {
+        width: 92%;
+    }
+
+    body {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .profile-image {
+        width: 190px;
+        height: 190px;
+    }
+
+    .lab-student-card,
+    .dashboard-card,
+    .lab-result-card {
+        padding: 17px;
+    }
+}
